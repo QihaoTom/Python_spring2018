@@ -13,3 +13,5 @@ for i in range(1,n):
     lst[j+1]=temp
         #把7赋回去，变为3，5，7，11，6
 print(lst)
+
+
