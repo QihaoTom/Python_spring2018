@@ -1,10 +1,13 @@
 #两种方式生成1到100的随机数
+
 ##第一种
 import random
 random.randint(1,100)
+
 ##第二种
 ###第二种更好
 from random import randint
+
 ##random模块中常用函数的使用方法
 randint(1,100)
 #从序列中获取一个随机值
