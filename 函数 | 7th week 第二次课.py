@@ -18,3 +18,20 @@ random.randrange(0,10,2)
 random.random()
 #生成【5，10】之间的一个随机浮点数
 random.uniform(5,10)
+
+#实现直接可调用，通用性！
+## 关键的语句是 if __name__== "__main__":
+from math import sqrt
+def isprime(x):
+  if x==1:
+    return False
+  k=int(sqrt(x))
+  for j in range(2,k+1):
+    if x%j==0:
+      return False
+  return True
+
+if __name__== "__main__":
+  for i in range(2,101):
+      if isprime(i):
+         print(i,end='')
