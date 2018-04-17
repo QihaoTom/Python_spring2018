@@ -7,9 +7,9 @@ random.randint(1,100)
 ## 第二种
 ###第二种更好
 from random import randint
+randint(1,100)
 
 ## random模块中常用函数的使用方法
-randint(1,100)
 # 从序列中获取一个随机值
 random.choice(['C++','Java','Python'])
 # 从range（0，10，2）中获取一个随机整数
