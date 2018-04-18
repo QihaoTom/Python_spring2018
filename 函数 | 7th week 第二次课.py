@@ -33,6 +33,19 @@ def isprime(x):
       return False
   return True
 
+## 王成军老师的Python基础
+## 生成1-100之间的所有素数！！
+def gen_primes(N):
+    """Generate primes up to N"""
+    primes = set()
+    for n in range(2, N):
+        if all(n % p > 0 for p in primes):
+            primes.add(n)
+            yield n
+
+print(*gen_primes(100))
+
+
 if __name__== "__main__":
   for i in range(2,101):
       if isprime(i):
