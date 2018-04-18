@@ -33,7 +33,7 @@ def isprime(x):
       return False
   return True
 
-## 王成军老师的Python基础
+## 王成军老师的Python基础，使用生成器函数（generator function）
 ## 生成1-100之间的所有素数！！
 def gen_primes(N):
     """Generate primes up to N"""
