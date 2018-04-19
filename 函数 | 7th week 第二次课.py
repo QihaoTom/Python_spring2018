@@ -20,8 +20,6 @@ random.random()
 random.uniform(5,10)
 
 
-# 实现直接可调用，通用性！
-## 关键的语句是 if __name__== "__main__": name 和 main前后各有两条下划线
 ## 求1——100之间的所有素数
 from math import sqrt
 def isprime(x):
@@ -46,6 +44,8 @@ def gen_primes(N):
 print(*gen_primes(100))
 
 
+# 实现直接可调用，通用性！
+## 关键的语句是 if __name__== "__main__": name 和 main前后各有两条下划线
 if __name__== "__main__":
   for i in range(2,101):
       if isprime(i):
