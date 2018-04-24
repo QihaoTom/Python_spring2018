@@ -28,3 +28,26 @@ def change(listB):
 listA=[1,2,3]
 print(change(listA))
 print(listA)
+
+# 修改形参对实参的影响,实参也跟着变
+def change(listB):
+    listB[0]=88
+    return listB
+listA=[1,2,3]
+print(change(listA))
+print(listA)
+
+# 修改形参的值不影响实参的做法
+def change(listB):
+    listB[0]=88
+    return listB
+listA=[1,2,3]
+# 不能用“backup_listA=listA”语句
+backup_listA=listA[:]
+print(change(listA))
+print(listA)
+print(backup_listA)
+
+
+
+
