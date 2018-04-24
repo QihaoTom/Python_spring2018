@@ -48,6 +48,38 @@ print(change(listA))
 print(listA)
 print(backup_listA)
 
+## 1.位置参数
+def printGrade(name,stuID,grade):
+    print("{0}({1})'s grade is {2}".format(name,stuID,grade))
+printGrade('Mary','1002','A')
+# 错误的结果
+printGrade('A','1002','Mary')
 
+## 默认参数,定义默认参数必须放在非默认参数的后面
+def printGrade(name,grade,className='Courage'):
+    print("{0}{1}'s grade is {2}".format(name,className,grade))
+printGrade('Mary','A')
 
+## 3.默认参数的值可以改变
+def f(x,y=True):
+    'x and y both correct words or not'
+    if y:
+        print(x,'and y both correct')
+    print(x,'is OK')
+f(68)
+f(68,False)
 
+## 4.可变长参数
+def greeting(args1,*tupleArgs):
+    print(args1)
+    print(tupleArgs)
+greeting('Hello','NJU','PKU','THU')
+
+## 可变长参数——可变长位置参数和可变长关键词参数
+def greeting(args1,*tupleArgs,**dictArgs):
+    print(args1)
+    print(tupleArgs)
+    print(dictArgs)
+names=['NJU','PKU','THU']
+info={'schoolName':'NJU','City':'Nanjing'}
+greeting('Hello,',*names,**info)
